@@ -1,13 +1,13 @@
 {
-  "name": "express-widget-vuejs-bootstrap",
+  "name": "dscpe-widget-express-widget-vuejs-bootstrap",
   "version": "1.0.0",
-  "description": "express-widget-vuejs-bootstrap boilerplate",
+  "description": "dscpe-widget-express-widget-vuejs-bootstrap",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.17.1"
   }
