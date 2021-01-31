@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:widget="http://www.netvibes.com/ns/">
+
+    <head>
+        <title>DS Widget Boilerplate</title>
+
+        <meta name="author" content="Dassault Systèmes Euromed CPE" />
+        <meta name="description" content="DS Widget Boilerplate with Express, VueJS and Bootstrap" />
+        <meta name="apiVersion" content="1.0" />
+        <meta name="debugMode" content="true" />
+        <meta name="strictMode" content="false" />
+
+        <!-- Application Preferences -->
+        <widget:preferences>
+            <widget:preference type="text" name="ctx" label="my text preference" defaultValue='' />
+        </widget:preferences>
+        
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+        <!-- VueJS -->
+        <script src="/widget/scripts/main.js"></script>
+        <!-- v-cloak is removed by VueJS at loading. It just prevents initial flickering. -->
+        <style>
+            [v-cloak] { display: none }
+        </style>
+
+    </head>
+
+    <body>
+        <div id="myWidgetApp" v-cloak>
+            <div class="jumbotron text-center">
+                <h1>{{greeting}}</h1>
+            </div>
+        </div>
+    </body>
+
+	<!-- Widget/VueJS Initialization -->
+	<script type="text/javascript">
+        function widgetLoading() {
+            if (widget) 
+            {
+                executeInitWidget();
+			} else {
+				setTimeout(widgetLoading, 100); //Wait for widget object to be added correctly
+			}
+        }
+		widgetLoading();
+    </script>
+
+</html>
