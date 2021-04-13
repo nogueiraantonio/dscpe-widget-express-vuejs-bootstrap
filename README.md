@@ -15,8 +15,10 @@ Javascript framework - loaded in memory through RequireJS.
 Bootstrap CSS for styling.
 
 # Installation
-Installation of NodeJS Express web server : `npm install`
-
+Installation of NodeJS Express web server :
+```bash
+npm install
+```
 # Deployment
 Depending on your development and hosting environment the deployment instructions will change greatly. If you are running VSCode and need to deploy in Microsoft Azure you can check this [article](https://docs.microsoft.com/en-us/azure/developer/javascript/tutorial/deploy-nodejs-azure-app-service-with-visual-studio-code)
 # 3DEXPERIENCE Widget Deployment
